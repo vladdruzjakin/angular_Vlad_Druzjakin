@@ -15,7 +15,7 @@ console.log(arrayNew)
 
 function factorial(num: number): any {
     let fact: number = num;
-    if (num < 0){
+    if (num < 0) {
         return console.log('Неверное число')
     } else {
         for (let i: number = fact - 1; i >= 1; i--) {
