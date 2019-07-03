@@ -1,21 +1,21 @@
 // 1)Определить переменные для всех примитивом джавасткрипта
-var num = 1,
-    str = 'string',
-    bool = true,
-    obj = {},
-    arrayNew = [1, 2, 3, 4, 5, 6],
-    array = [1, 2, 3, 4, 5, 6],
-    arrCortage = [1, true, 'str'];
+var num = 1, str = 'string', bool = true, obj = {}, arrayNew = [1, 2, 3, 4, 5, 6], array = [1, 2, 3, 4, 5, 6], arrCortage = [1, true, 'str'];
 console.log(array);
 console.log(arrayNew);
 // 2)Написать функцию принимающую число и 
 // возвращающую его факториал по всем правилам тайпскрипта
 function factorial(num) {
     var fact = num;
-    for (var i = fact - 1; i >= 1; i--) {
-        fact *= i;
-    };
-    return fact;
+    if (num < 0) {
+        return console.log('Неверное число');
+    }
+    else {
+        for (var i = fact - 1; i >= 1; i--) {
+            fact *= i;
+        }
+        ;
+        return fact;
+    }
 }
 console.log(factorial(3));
 // 3)Написать функцию принимающую
@@ -24,7 +24,8 @@ function fibonacci(num) {
     var arrFibo = [0, 1];
     if (num <= 2) {
         return arrFibo.slice(0, num);
-    } else {
+    }
+    else {
         for (var i = 2; i < num; i++) {
             arrFibo.push(arrFibo[arrFibo.length - 1] + arrFibo[arrFibo.length - 2]);
         }

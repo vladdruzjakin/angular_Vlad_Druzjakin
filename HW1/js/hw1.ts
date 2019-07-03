@@ -13,12 +13,16 @@ console.log(arrayNew)
 // 2)Написать функцию принимающую число и 
 // возвращающую его факториал по всем правилам тайпскрипта
 
-function factorial(num: number): number {
+function factorial(num: number): any {
     let fact: number = num;
-    for (let i: number = fact - 1; i >= 1; i--) {
-        fact *= i;
-    };
-    return fact
+    if (num < 0){
+        return console.log('Неверное число')
+    } else {
+        for (let i: number = fact - 1; i >= 1; i--) {
+            fact *= i;
+        };
+        return fact
+    }
 }
 console.log(factorial(3))
 
