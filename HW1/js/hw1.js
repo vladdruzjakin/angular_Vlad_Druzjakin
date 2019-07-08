@@ -12,8 +12,8 @@ console.log(arrayNew);
 // возвращающую его факториал по всем правилам тайпскрипта
 function factorial(num) {
     var fact = num;
-    if (num < 0) {
-        return console.log('Неверное число');
+    if (num <= 0) {
+        return fact = 1;
     } else {
         for (var i = fact - 1; i >= 1; i--) {
             fact *= i;
@@ -21,20 +21,22 @@ function factorial(num) {
         return fact;
     }
 }
-console.log(factorial(3));
-
-
+console.log(factorial(0));
 // 3)Написать функцию принимающую
 //  число и возврашающую массив с числами фибоначи до этого порядкового числа
 function fibonacci(num) {
     var arrFibo = [0, 1];
-    if (num <= 2) {
-        return arrFibo.slice(0, num);
+    if (num <= 0) {
+        return "Введено неверное число";
     } else {
-        for (var i = 2; i < num; i++) {
-            arrFibo.push(arrFibo[arrFibo.length - 1] + arrFibo[arrFibo.length - 2]);
+        if (num <= 2) {
+            return arrFibo.slice(0, num);
+        } else {
+            for (var i = 2; i < num; i++) {
+                arrFibo.push(arrFibo[arrFibo.length - 1] + arrFibo[arrFibo.length - 2]);
+            }
+            return arrFibo;
         }
-        return arrFibo;
     }
 }
-console.log(fibonacci(10));
+console.log(fibonacci(-1));

@@ -15,8 +15,8 @@ console.log(arrayNew)
 
 function factorial(num: number): any {
     let fact: number = num;
-    if (num < 0) {
-        return console.log('Неверное число')
+    if (num <= 0) {
+        return fact = 1
     } else {
         for (let i: number = fact - 1; i >= 1; i--) {
             fact *= i;
@@ -24,27 +24,25 @@ function factorial(num: number): any {
         return fact
     }
 }
-console.log(factorial(3))
+console.log(factorial(0))
 
 
 // 3)Написать функцию принимающую
 //  число и возврашающую массив с числами фибоначи до этого порядкового числа
 
-function fibonacci(num: number): number[] {
-    let arrFibo: number[] = [0, 1];
-    if (num <= 2) {
-        return arrFibo.slice(0, num)
+function fibonacci(num: number): any {
+    const arrFibo: number[] = [0, 1];
+    if (num <= 0) {
+        return "Введено неверное число"
     } else {
-        for (let i: number = 2; i < num; i++) {
-            arrFibo.push(arrFibo[arrFibo.length - 1] + arrFibo[arrFibo.length - 2]);
+        if (num <= 2) {
+            return arrFibo.slice(0, num)
+        } else {
+            for (let i: number = 2; i < num; i++) {
+                arrFibo.push(arrFibo[arrFibo.length - 1] + arrFibo[arrFibo.length - 2]);
+            }
+            return arrFibo
         }
-        return arrFibo
     }
-
 }
-console.log(fibonacci(10))
-
-
-
-
-
+console.log(fibonacci(-1))
