@@ -46,3 +46,5 @@ function fibonacci(num: number): any {
     }
 }
 console.log(fibonacci(-1))
+
+
