@@ -22,6 +22,8 @@ function factorial(num) {
     }
 }
 console.log(factorial(3));
+
+
 // 3)Написать функцию принимающую
 //  число и возврашающую массив с числами фибоначи до этого порядкового числа
 function fibonacci(num) {

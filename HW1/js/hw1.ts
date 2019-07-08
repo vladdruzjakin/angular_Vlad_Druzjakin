@@ -43,3 +43,8 @@ function fibonacci(num: number): number[] {
 
 }
 console.log(fibonacci(10))
+
+
+
+
+
