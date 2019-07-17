@@ -7,51 +7,60 @@
 
 // Создать инстансты классов - SpiderMan и IronMan
 // + Создать базовые интерфейсы для классов User и Achivement.
-
-interface UserInstans {
-    name: string,
-    age: number,
-    achivments: string,
-    AddYearOfLife(num: number): number,
-    AddAchvement(achevemnt): string
-}
-
-interface AchivementInstans {
-    type: string,
-    heroical: string,
-    description: string
-}
-
-class User implements UserInstans {
-    public name: string;
-    public age: number;
-    public achivments: string;
-    constructor(name: string, achivments: string) {
-        this.name = name,
-            this.achivments = achivments
+namespace SuperHero {
+    export interface AchivementInterface {
+        type: string,
+        heroical: boolean,
+        description: string
     }
+    export class Achivement implements AchivementInterface {
+        description: string;
+        heroical: boolean;
+        type: string;
 
-    AddYearOfLife(num: number): number {
-        return this.age = num;
     }
-    AddAchvement(achevemnt: any): string {
-        return this.achivments += ` ${achevemnt}`
+    export interface UserInterface {
+        name: string,
+        age: number,
+        achivments: AchivementInterface[],
+        AddYearOfLife(): void,
+        AddAchvement(achevemnt: AchivementInterface): void
     }
-}
+    export class User implements UserInterface {
+        public name: string;
+        public age: number;
+        public achivments: AchivementInterface[] = [];
 
-class Achivement implements AchivementInstans {
-    public type: string;
-    public heroical: string;
-    public description: string;
-
-    constructor(type: string, heroical: string, description: string) {
-        this.type = type,
-            this.heroical = heroical,
-            this.description = description
+        AddYearOfLife(): void { }
+        AddAchvement(achevemnt: AchivementInterface): void {
+            this.achivments.push(achevemnt);
+        }
     }
 }
 
-const SpiderMan = new User('SpiderMan', 'Собрал 100 ракушек'),
-    IronMan = new User('IronMan', 'Преодалел высоту в 2000 метров'),
-    SpiderManAchive = new Achivement('Бой', 'Боевые снаряды', 'Ваш игрок теперь может использовать снаряды'),
-    IronManAchive = new Achivement('Улучшение костюма', 'Дальше больше', 'Ваш костюм может достикать высоты в 2500 метров');
+const achivmentOne: SuperHero.Achivement = {
+    type: 'BeGreater',
+    heroical: true,
+    description: 'First description'
+};
+const achivmentTwo: SuperHero.Achivement = {
+    type: 'Hero',
+    heroical: true,
+    description: 'Second description'
+};
+
+const SpiderMan = new SuperHero.User();
+SpiderMan.name = 'Spider-Man';
+SpiderMan.age = 21;
+SpiderMan.AddAchvement(achivmentOne);
+SpiderMan.AddAchvement(achivmentTwo);
+
+
+const IronMan = new SuperHero.User();
+IronMan.name = 'Iron-Man';
+IronMan.age = 34;
+IronMan.AddAchvement(achivmentOne);
+IronMan.AddAchvement(achivmentTwo);
+
+console.log(SpiderMan);
+console.log(IronMan); 
