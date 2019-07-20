@@ -51,17 +51,12 @@ implementInterval.subscribe({
 });
 
 //3. Используя тольк reduce иммплементировать функционал filter.
-const implementReduce = range(0, 100)
+const implementReduce = range(0,10)
   .pipe(reduce((acc, val) => {
     if (val % 2 === 0) {
-      acc = val;
-      console.log(acc)
-
+      acc += val;
     }
-
     return acc
-
-
   }, 10))
   implementReduce.subscribe(
   (val) => {
