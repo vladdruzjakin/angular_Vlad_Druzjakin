@@ -1,0 +1,24 @@
+.wrapper {
+  width: 600px;
+  margin: 0 auto;
+}
+
+h2 {
+  text-align: center;
+}
+
+.inputImgUrl {
+  text-align: center;
+}
+
+.inputImgUrl input {
+
+  width: 500px;
+  border: none;
+  border-bottom: 1px solid black
+}
+
+.picture img {
+  width: 600px;
+  padding: 20px 0px;
+}
