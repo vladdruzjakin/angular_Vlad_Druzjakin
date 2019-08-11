@@ -1,0 +1,5 @@
+<app-input-component (event)="imgArray($event)"></app-input-component>
+<h1>Gallary</h1>
+<div class="blockGallary">
+  <img *ngFor="let item of imgGallary" src="{{ item }}" alt="" />
+</div>

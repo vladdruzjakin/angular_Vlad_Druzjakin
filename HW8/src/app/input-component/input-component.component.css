@@ -1,0 +1,16 @@
+input {
+  border: none;
+  border-bottom: 2px solid black;
+  outline: none;
+  margin: 20px auto;
+  width: 600px;
+  text-align: center;
+}
+button {
+  border: none;
+  background: #3333;
+  outline: none;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}

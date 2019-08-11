@@ -1,0 +1,16 @@
+.app-root {
+  background: #000;
+  width: 100%;
+  height: 100vh;
+}
+.blockGallary {
+  width: 1000px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 300px 300px 300px;
+  grid-gap: 20px;
+}
+.blockGallary img {
+  width: 300px;
+  height: 300px;
+}
