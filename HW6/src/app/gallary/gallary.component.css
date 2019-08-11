@@ -1,0 +1,23 @@
+h2 {
+  text-align: center;
+}
+
+.gallary {
+  display: grid;
+  grid-template-columns: 150px 150px 150px;
+  justify-content: center;
+  grid-column-gap: 15px;
+  grid-row-gap: 15px;
+  margin: 20px 0px 20px 0px;
+}
+
+.gallary img {
+  width: 150px;
+  height: 100px;
+}
+
+.mainPicture img {
+  text-align: center;
+  width: 100%;
+  height: auto;
+}

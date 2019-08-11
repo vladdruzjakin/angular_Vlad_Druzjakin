@@ -1,0 +1,28 @@
+h2 {
+  text-align: center;
+}
+
+.inputImgUrl {
+  text-align: center;
+}
+
+.inputImgUrl input {
+  margin: 0 auto;
+  width: 500px;
+  border: none;
+  border-bottom: 1px solid black
+}
+
+.pictureGrid {
+  display: grid;
+  grid-template-columns: 150px 150px 150px;
+  justify-content: center;
+  grid-column-gap: 15px;
+  grid-row-gap: 15px;
+  margin: 20px 0px 20px 0px;
+}
+
+.pictureGrid img {
+  width: 150px;
+  height: 100px;
+}
