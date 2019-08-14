@@ -1,0 +1,53 @@
+.d-none {
+  display: none;
+}
+
+.popupImage {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  width: 100%;
+  height: 100vh;
+  background: #333;
+}
+
+
+
+.card .card-image img {
+  height: 170px;
+  margin: 0 auto;
+  width: 90%;
+}
+
+.blockImg {
+  width: 800px;
+  height: 600px;
+  margin: 50px auto;
+  display: flex;
+  justify-content: center;
+}
+
+.blockImg img {
+  width: auto;
+  height: 500px;
+
+}
+
+.closeImg {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: none;
+  border: none;
+  color: #fff;
+}
+
+.noselect {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
